@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Idade</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Clientes</h1>
+
+            <p>Digite as informações abaixo e saiba qual o cliente mais velho</p>
+
+            <label for="txtNumeroClientes">Número de clientes:</label>
+            <input type="number" id="txtNumeroClientes">
+
+            <label for="txtNomeCliente">Nome do cliente:</label>
+            <input type="text" id="txtNomeCliente">
+
+            <label for="txtIdadeCliente">Idade do cliente:</label>
+            <input type="number" id="txtIdadeCliente">
+
+
+            <button onclick="botao_click()">Armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var nomes = [];
+        var idades = [];
+
+        function botao_click() {
+
+            var numeroDeClientes = parseInt(document.getElementById("txtNumeroClientes").value);
+
+            var nomeDoCliente = document.getElementById("txtNomeCliente");
+
+            var idadeDoCliente = document.getElementById("txtIdadeCliente");
+
+            if (nomes.length < numeroDeClientes && idades.length < numeroDeClientes) {
+
+                var nome = nomeDoCliente.value;
+                nomes.push(nome);
+                var idade = parseFloat(txtIdadeCliente.value);
+                idades.push(idade);
+
+                nomeDoCliente.value = "";
+                idadeDoCliente.value = "";
+
+                nomeDoCliente.focus();
+            }
+
+            if (nomes.length == numeroDeClientes && idades.length == numeroDeClientes) {
+                var maiorIdadeDigitada;
+                var posicaoMaiorIdade;
+
+                for (var i = 0; i < idades.length; i++) {
+                    var idadeDigitada = idades[i];
+
+                    if (maiorIdadeDigitada == undefined || idadeDigitada > maiorIdadeDigitada) {
+                        maiorIdadeDigitada = idadeDigitada;
+                        posicaoMaiorIdade = i;
+                    }
+                }
+                
+                nomePessoaMaisVelha = nomes[posicaoMaiorIdade];
+
+                alert("A idade da pessoa mais velha é " + maiorIdadeDigitada + " que é a de " + nomePessoaMaisVelha);
+
+                nomes = [];
+                idades = [];
+            }
+        }
+
+    </script>
+
+</body>
+</html>

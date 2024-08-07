@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Olá mundo</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Olá mundo Para</h1>
+
+            <p>Digite as informações abaixo</p>
+
+            <label for="txt1">Quantidade de vezes:</label>
+            
+            <input type="number" id="txtQuantidadeDeVezes">
+
+            <button onclick="botao_click()">Resultado</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var quantidade = document.getElementById("txtQuantidadeDeVezes").value;
+
+            var resultadoQuantidade = parseInt(quantidade);
+
+            for (var i = resultadoQuantidade; i >= 1; i--) {
+                alert("Olá Mundo " + i);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

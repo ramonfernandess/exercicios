@@ -1,0 +1,9 @@
+{
+  "carro": {
+    "marca": "Nissan",
+    "modelo": "Sentra",
+    "placa": "NYU-7777",
+    "cor": "Branco",
+    "anoFabricacao": 2024
+  }
+}

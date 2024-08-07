@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Números p/2</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Positivos e Negativos</h1>
+
+            <label for="txtQuantidadeNumeros">Digite a quantidade de números desejados:</label>
+            <input type="number" id="txtQuantidadeNumeros">
+
+            <laber for="txtNumero">Digite o número:</laber>
+            <input type="number" id="txtNumero" />
+
+            <button onclick="botao_click()">Armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var numeros = [];
+        var numerosNegativos = [];
+
+        function botao_click() {
+
+            var txtQntdNumeros = document.getElementById("txtQuantidadeNumeros").value;
+            var qntdNumeros = parseInt(txtQntdNumeros);
+
+            var txtNumero = document.getElementById("txtNumero");
+
+
+            if (numeros.length < qntdNumeros) {
+                var numero = parseInt(txtNumero.value);
+                numeros.push(numero);
+
+                txtNumero.value = "";
+                txtNumero.focus();
+            }
+
+            if (numeros.length == qntdNumeros) {
+                for (var i = 0; i < numeros.length; i++) {
+
+                    var numero = numeros[i];
+
+                    if (numero < 0) {
+                        numerosNegativos.push(numero);
+                    }
+                }
+
+                alert("Os números negativos são: " + numerosNegativos.toLocaleString());
+
+                numeros = [];
+                numerosNegativos = [];
+                txtNumero.value = "";
+                txtQntdNumeros.value = "";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

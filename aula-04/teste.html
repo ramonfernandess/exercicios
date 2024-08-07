@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <h2>JavaScript - Exemplo 21</h2>
+
+    <hr>
+
+    <p><b>** MENU DE OPÇÕES **</b></p>
+
+    <p>1. Inserir Dados</p>
+
+    <p>2. Consultar Dados</p>
+
+    <p>3. Editar Dados</p>
+
+    <p>4. Excluir Dados</p>
+
+    <p>5. Sexo Absurdo</p>
+
+    <p><b>Informe uma Opção:</b></p>
+
+    <input id="opcao" value="0" />
+
+    </br>
+
+    <button onclick="funcao()">Opção</button>
+
+    <p id="ex21"></p>
+
+    <script>
+
+        function funcao() {
+
+            opcao = document.getElementById("opcao").value;
+
+            switch (opcao) {
+
+                case "1":
+
+                    mensagem = "Escolhida a Inserção de Dados.";
+
+                    break;
+
+                case "2":
+
+                    mensagem = "Escolhida a Consulta de Dados.";
+
+                    break;
+
+                case "3":
+
+                    mensagem = "Escolhida a Edição de Dados.";
+
+                    break;
+
+                case "4":
+
+                    mensagem = "Escolhida a Exclusão de Dados.";
+
+                    break;
+
+                case "5":
+
+                    mensagem = "Sexo absurdo!";
+
+                    break;
+
+                default:
+
+                    mensagem = "Opção Inválida.";
+
+            }
+
+            document.getElementById('ex21').innerHTML = mensagem;
+
+        }
+
+    </script>
+
+</body>

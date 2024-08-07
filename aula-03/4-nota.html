@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Nota</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Nota final</h1>
+
+            <p>Digite suas notas abaixo</p>
+
+            <label for="txt1">Nota no 1° ciclo:</label>
+
+            <input type="number" id="txtCaixa1">
+
+            <label for="txt1">Nota no 2° ciclo:</label>
+
+            <input type="number" id="txtCaixa2">
+
+            <label for="txt1">Nota no 3° ciclo:</label>
+
+            <input type="number" id="txtCaixa3">
+
+
+            <button onclick="botao_click()">Saber resultado</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var nota1 = document.getElementById("txtCaixa1").value;
+
+            var nota2 = document.getElementById("txtCaixa2").value;
+
+            var nota3 = document.getElementById("txtCaixa3").value;
+
+            var notaNumero1 = parseFloat(nota1);
+
+            var notaNumero2 = parseFloat(nota2);
+
+            var notaNumero3 = parseFloat(nota3);
+
+            var geral = (notaNumero1 + notaNumero2 + notaNumero3) / 3;
+
+            var mensagem = "Sua média final é " + geral;
+
+            if (geral < 6) {
+                alert(mensagem + " e você está REPROVADO!");
+            }
+
+            else if (geral >= 6 && geral <= 10) {
+                alert(mensagem + " e você está APROVADO!");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

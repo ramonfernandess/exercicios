@@ -1,0 +1,21 @@
+#txtNome {
+    background: gray
+}
+
+//ou
+
+form #txt2 {
+    background: red
+}
+
+ul li {
+    font-size: 25px
+}
+
+form input[type="text"] {
+    height: 35px
+}
+form input[type="password"] {
+    height: 50px
+}
+

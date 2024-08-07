@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cliente</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Cliente</h1>
+
+            <p>Digite números de 0 à 5 para exibir nomes na tela</p>
+
+            <label for="txt1">Digite aqui:</label>
+            <input type="number" id="txtDigitado">
+
+
+
+            <button onclick="botao_click()">Exibir cliente</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var clientes = ["Ramon", "Cléia", "Paôla", "Paloma", "Ramon Filho", "Queila"];
+
+        function botao_click() {
+
+            var numeroDigitado = parseInt(document.getElementById("txtDigitado").value);
+
+            if (numeroDigitado == 0) {
+                alert("Você escolheu Ramon");
+            }
+
+            else if  (numeroDigitado == 1) {
+                alert("Você escolheu Cléia");
+            }
+                    
+            else if (numeroDigitado == 2) {
+                alert("Você escolheu Paôla");
+            }
+
+            else if (numeroDigitado == 3) {
+                alert("Você escolheu Paloma");
+            }
+
+            else if (numeroDigitado == 4) {
+                alert("Você escolheu Ramon Filho");
+            }
+
+            else if (numeroDigitado == 5) {
+                alert("Você escolheu Queila");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
